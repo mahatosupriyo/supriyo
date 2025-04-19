@@ -1,69 +1,196 @@
-import styles from '@/app/home.module.scss'
-import GridLayout from '@/components/gridlayout';
-import Link from 'next/link';
+"use client"
+
+import styles from "@/app/home.module.scss"
+import Link from "next/link"
+import { delay, motion } from "framer-motion"
+import { useEffect, useState } from "react"
 
 export default function Home() {
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  useEffect(() => {
+    setIsLoaded(true)
+  }, [])
+
+  // Staggered animation for navbar items
+  const navbarVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.4,
+        ease: "easeOut",
+      },
+    },
+  }
+
+  // Staggered animation for hero content
+  const heroVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.4,
+        ease: "easeInOut",
+      },
+    },
+  }
+
+  
+
+  const heroItemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.4,
+        ease: "easeInOut",
+      },
+    },
+  }
+
+    // Animation for project links
+    const projectLinkVariants = {
+      hidden: { opacity: 0, x: -10 },
+      visible: (i: number) => ({
+        opacity: 1,
+        x: 0,
+        transition: {
+          duration: 0.5,
+          delay: 1 + i * 0.1,
+          ease: "easeOut",
+        },
+      }),
+    }
+
+  // Animation for the underline
+  const underlineVariants = {
+    hidden: { width: "0%" },
+    visible: {
+      width: "100%",
+      transition: {
+        duration: 1.2,
+        ease: "easeInOut",
+        delay: 0.8,
+      },
+    },
+  }
+
+
   return (
     <>
       <div className={styles.wraper}>
         <div className={styles.container}>
-
-          <div className={styles.navbar}>
-            <h1 className={styles.title}>Supriyo Mahato</h1>
+          {/* Navbar with staggered fade-in */}
+          <motion.div
+            className={styles.navbar}
+            initial="hidden"
+            animate={isLoaded ? "visible" : "hidden"}
+            variants={navbarVariants}
+          >
+            <motion.h1 className={styles.title} variants={navbarVariants}>
+              Supriyo Mahato
+            </motion.h1>
             <div className={styles.rightpanel}>
-              <h1 className={styles.link}>Creations I made</h1>
-              <div className={styles.paragraph}>
+              <motion.h1
+                className={styles.link}
+                variants={navbarVariants}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Creations I made
+              </motion.h1>
+              <motion.div
+                className={styles.paragraph}
+                variants={navbarVariants}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+              >
                 Contact me
-              </div>
+              </motion.div>
             </div>
+          </motion.div>
 
-          </div>
+          {/* Hero section with staggered animations */}
+          <motion.div
+            className={styles.hero}
+            initial="hidden"
+            animate={isLoaded ? "visible" : "hidden"}
+            variants={heroVariants}
+          >
+            <motion.h1 className={styles.herotitle} variants={heroItemVariants}>
+              <motion.span className={styles.spanprefix} variants={heroItemVariants}>
+                (About me)
+              </motion.span>
+              Product designer and mentor, blending storytelling with systems that scale.
+            </motion.h1>
 
+            <motion.span className={styles.underline} variants={underlineVariants}></motion.span>
 
-          <div className={styles.hero}>
-            <h1 className={styles.herotitle}>
-              <span className={styles.spanprefix}>(About me)</span>Product designer and mentor, blending storytelling with systems that scale.
-            </h1>
-
-
-            <span className={styles.underline}></span>
-
-
-            <div className={styles.herodescription}>
-              <img src="https://i.ibb.co/8g2TsgFb/image-1.png" className={styles.creator} />
+            <motion.div className={styles.herodescription} variants={heroItemVariants}>
+              <motion.img
+                src="https://i.ibb.co/8g2TsgFb/image-1.png"
+                className={styles.creator}
+                variants={heroItemVariants}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                  transition: {
+                    duration: 0.8,
+                    delay: 0.6,
+                    ease: "easeOut",
+                  },
+                }}
+                whileHover={{ scale: 1.03 }}
+              />
 
               <div className={styles.rightpanel}>
                 <div className={styles.leftwraper}>
-                  <h3 className={styles.subtitle}>
+                  <motion.h3 className={styles.subtitle} variants={heroItemVariants}>
                     Shaping products with heart, logic, and 6+ years of grind.
-                  </h3>
-
-                  <p className={styles.description}>
-                    I design like I live — curious, and always evolving.
-                    <br /><br />
-                    From robust B2B tools to expressive brand stories, I shape ideas into meaningful digital experiences.
-                    <br /><br />
-                    And I make time to guide new designers chasing their first big Job.
-                  </p>
+                  </motion.h3>
                 </div>
 
                 <div className={styles.rightwraper}>
-                  <p className={styles.paragraph}>(Creations)</p>
+                  <motion.p className={styles.paragraph} variants={heroItemVariants}>
+                    (Creations)
+                  </motion.p>
                   <div className={styles.popularprojects}>
-                    <Link className={styles.link} href="/">Antern</Link>
-                    <Link className={styles.link} href="/">Skyvets</Link>
-                    <Link className={styles.link} href="/">Ember's</Link>
-                    <Link className={styles.link} href="/">Edu Burner</Link>
-                    <Link className={styles.link} href="/">SBL</Link>
+                    {["Antern", "Skyvets", "Ember's", "Edu Burner", "SBL"].map((project, i) => (
+                      <motion.div
+                        key={project}
+                        variants={projectLinkVariants}
+                        custom={i}
+                        initial="hidden"
+                        animate={isLoaded ? "visible" : "hidden"}
+                      >
+                        <motion.div whileHover="hover" initial="initial">
+                          <Link className={styles.link} href="/">
+                            {project}
+                            <motion.svg
+                              className={styles.linkicon}
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 40 40"
+                            >
+                              <path d="M13 26.6429L14.3571 28L27.9277 14.4294L26.5706 13.0723L13 26.6429Z" />
+                              <path d="M26.0808 13V27.3938H28V13H26.0808Z" />
+                              <path d="M13.6062 13V14.9192H28V13L13.6062 13Z" />
+                            </motion.svg>
+                          </Link>
+                        </motion.div>
+                      </motion.div>
+                    ))}
                   </div>
                 </div>
               </div>
-            </div>
-
-          </div>
-
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </>
-  );
+  )
 }
