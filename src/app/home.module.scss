@@ -1,0 +1,157 @@
+@use '../styles/essentials';
+@import '../styles/essentials';
+
+$background: hsl(0, 0%, 100%);
+$font-size: 1.6rem;
+$color: #121212;
+
+.wraper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: $background;
+    min-height: 100vh;
+    padding-bottom: 6rem;
+
+    .container {
+        width: 100%;
+        max-width: 200rem;
+        display: flex;
+        flex-direction: column;
+        gap: 10rem;
+    }
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4rem;
+
+    .rightpanel {
+        width: 50%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, minmax(10px, auto)); // adjust for height
+        gap: 35px;
+    }
+}
+
+.title {
+    font-size: $font-size;
+    font-weight: 700;
+    line-height: 110%;
+    color: $color;
+}
+
+.link {
+    font-size: $font-size;
+    font-weight: 700;
+    color: $color;
+
+    line-height: 110%;
+}
+
+.paragraph {
+    font-size: $font-size;
+    font-weight: 700;
+    color: $color;
+
+    line-height: 120%;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    padding: 0rem 4rem;
+
+    .underline {
+        width: 100%;
+        height: 0.16rem;
+        background-color: $color;
+        opacity: 0.1;
+    }
+
+    .herotitle {
+        font-size: 5rem;
+        line-height: 100%;
+        color: $color;
+        font-weight: 700;
+
+        .spanprefix {
+            font-size: 1.56rem;
+            margin-right: 20%;
+            font-weight: 700;
+        }
+    }
+
+    .herodescription {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .creator {
+            aspect-ratio: 4/5;
+            display: flex;
+            object-fit: cover;
+
+            height: 20rem;
+        }
+
+        .rightpanel {
+            display: flex;
+            width: 50%;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .leftwraper {
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+                width: 50%;
+                padding-right: 4rem;
+
+                .subtitle {
+                    font-size: 2.4rem;
+                    line-height: 120%;
+                    color: $color;
+                    font-weight: 700;
+                }
+
+                .description {
+                    font-size: 1.7rem;
+                    line-height: 120%;
+                    color: $color;
+                    opacity: 0.5;
+                    font-weight: 600;
+                }
+            }
+
+            .rightwraper {
+                display: flex;
+                width: 50%;
+                flex-direction: column;
+                gap: 5rem;
+
+                .popularprojects {
+                    display: flex;
+                    flex-direction: column;
+
+
+                    .link {
+                        padding: 1.4rem 0rem;
+                        font-size: 1.7rem;
+                        text-decoration: none;
+                        border-bottom: 0.16rem solid hsl(0, 0%, 90%);
+                    }
+                }
+            }
+
+
+        }
+    }
+}

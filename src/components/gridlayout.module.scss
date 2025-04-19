@@ -1,0 +1,16 @@
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, minmax(10px, auto)); // adjust for height
+    gap: 35px;
+    padding: 4rem; // same as in image
+    // height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cell {
+    // Optional: style individual cells for debugging or placement
+    outline: 1px solid rgba(0, 0, 0, 0.1);
+}
+
