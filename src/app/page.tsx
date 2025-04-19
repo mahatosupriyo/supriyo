@@ -21,6 +21,8 @@ export default function Home() {
       transition: {
         duration: 0.4,
         ease: "easeOut",
+        staggerChildren: 0.2,
+        delayChildren: 0.4,
       },
     },
   }
@@ -84,21 +86,22 @@ export default function Home() {
     <>
       <div className={styles.wraper}>
         <div className={styles.container}>
-          {/* Navbar with staggered fade-in */}
+
           <motion.div
             className={styles.navbar}
             initial="hidden"
             animate={isLoaded ? "visible" : "hidden"}
             variants={navbarVariants}
           >
-            <motion.h1 className={styles.title} variants={navbarVariants}>
-              Supriyo Mahato
+            <motion.h1 className={styles.title} style={{display: 'flex', flexDirection: "row", alignItems: "flex-start"}} variants={navbarVariants}>
+              Supriyo Mahato<span style={{fontSize: '1rem', paddingLeft: '0.3rem', lineHeight: '100%', opacity: 0.4}}>IN</span>
             </motion.h1>
             <div className={styles.rightpanel}>
               <motion.h1
                 className={styles.link}
                 variants={navbarVariants}
                 whileTap={{ scale: 0.98 }}
+
               >
                 Creations I made
               </motion.h1>
@@ -168,7 +171,7 @@ export default function Home() {
                         animate={isLoaded ? "visible" : "hidden"}
                       >
                         <motion.div whileHover="hover" initial="initial">
-                          <Link className={styles.link} href="/">
+                          <Link className={styles.projectlink} href="/">
 
                             {project}
 
