@@ -2,7 +2,7 @@
 
 import styles from "@/app/home.module.scss"
 import Link from "next/link"
-import { delay, motion } from "framer-motion"
+import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
 
 export default function Home() {
@@ -38,7 +38,7 @@ export default function Home() {
     },
   }
 
-  
+
 
   const heroItemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -52,19 +52,19 @@ export default function Home() {
     },
   }
 
-    // Animation for project links
-    const projectLinkVariants = {
-      hidden: { opacity: 0, x: -10 },
-      visible: (i: number) => ({
-        opacity: 1,
-        x: 0,
-        transition: {
-          duration: 0.5,
-          delay: 1 + i * 0.1,
-          ease: "easeOut",
-        },
-      }),
-    }
+  // Animation for project links
+  const projectLinkVariants = {
+    hidden: { opacity: 0, x: -10 },
+    visible: (i: number) => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.5,
+        delay: 1 + i * 0.1,
+        ease: "easeOut",
+      },
+    }),
+  }
 
   // Animation for the underline
   const underlineVariants = {
@@ -98,15 +98,13 @@ export default function Home() {
               <motion.h1
                 className={styles.link}
                 variants={navbarVariants}
-                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
                 Creations I made
               </motion.h1>
               <motion.div
-                className={styles.paragraph}
+                className={styles.link}
                 variants={navbarVariants}
-                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
                 Contact me
@@ -136,11 +134,12 @@ export default function Home() {
                 className={styles.creator}
                 variants={heroItemVariants}
                 initial={{ opacity: 0, scale: 0.9 }}
+                draggable="false"
                 animate={{
                   opacity: 1,
                   scale: 1,
                   transition: {
-                    duration: 0.8,
+                    duration: 0.2,
                     delay: 0.6,
                     ease: "easeOut",
                   },
@@ -170,7 +169,9 @@ export default function Home() {
                       >
                         <motion.div whileHover="hover" initial="initial">
                           <Link className={styles.link} href="/">
+
                             {project}
+
                             <motion.svg
                               className={styles.linkicon}
                               xmlns="http://www.w3.org/2000/svg"

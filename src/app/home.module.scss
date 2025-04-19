@@ -1,7 +1,7 @@
 @use '../styles/essentials';
 @import '../styles/essentials';
 
-$background: hsl(0, 0%, 100%);
+$background: hsl(0, 0%, 1010%);
 $font-size: 1.6rem;
 $color: #121212;
 
@@ -53,15 +53,21 @@ $color: #121212;
     color: $color;
 
     line-height: 110%;
+    user-select: none;
+    cursor: pointer;
 }
 
 .paragraph {
-    font-size: $font-size;
+    // font-size: $font-size;
+    font-size: 1.56rem;
+
     font-weight: 700;
     color: $color;
 
-    line-height: 120%;
+    line-height: 110%;
+    user-select: none;
 }
+
 
 .hero {
     display: flex;
@@ -98,7 +104,8 @@ $color: #121212;
             aspect-ratio: 4/5;
             display: flex;
             object-fit: cover;
-
+            pointer-events: none;
+            user-select: none;
             height: 28rem;
         }
 
