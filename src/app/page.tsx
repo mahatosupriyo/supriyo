@@ -115,7 +115,6 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* Hero section with staggered animations */}
           <motion.div
             className={styles.hero}
             initial="hidden"
@@ -144,7 +143,7 @@ export default function Home() {
                   transition: {
                     duration: 0.2,
                     delay: 0.6,
-                    ease: "easeOut",
+                    ease: "easeInOut",
                   },
                 }}
                 whileHover={{ scale: 1.03 }}

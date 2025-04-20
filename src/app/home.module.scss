@@ -29,7 +29,7 @@ $color: #121212;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    padding: 2.2rem 4rem;
+    padding: 4rem;
 
     .rightpanel {
         width: 50%;
@@ -53,16 +53,8 @@ $color: #121212;
     color: $color;
 
     line-height: 110%;
-    user-select: none;
-    padding: 1.6rem 1.4rem;
-    border-radius: 0.4rem;
-
     cursor: pointer;
-
-    &:focus{
-        outline: 0.2rem solid #0C8CE9;
-
-    }
+    user-select: none;
 }
 
 .paragraph {
@@ -162,7 +154,7 @@ $color: #121212;
 
                     .projectlink {
                         position: relative;
-                        padding: 1.66rem 0rem;
+                        padding: 1.4rem 0rem;
                         font-size: 1.7rem;
                         font-weight: 600;
                         text-decoration: none;
