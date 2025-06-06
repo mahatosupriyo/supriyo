@@ -76,7 +76,7 @@ export default function Portfolio() {
                     <div className={styles.institution}>
                         <div className={styles.name}>Sister Nivedita University</div>
                         <div className={styles.details}>Kolkata, IN</div>
-                        <div className={styles.details}>Bachelor of Design</div>
+                        <div className={styles.details}>B.Design, Communication Design</div>
                         {/* <div className={styles.year}>2009</div> */}
                     </div>
 
@@ -138,6 +138,54 @@ export default function Portfolio() {
 
                 </section>
 
+            </div>
+
+            <div className={styles.projects}>
+                <div className={styles.projectheader}>
+
+                    <div className={styles.chip}>
+                        Edu Burner
+                        <br />
+                        <span className={styles.wiped}>
+                            ↳ 2024
+                        </span>
+                    </div>
+
+                    <div className={styles.chip}>
+                        IPR for class XII CBSE
+                        <br />
+                        <span className={styles.wiped}>
+                            ↳ Wrote & Designed
+                        </span>
+                    </div>
+
+                    <div className={styles.chip}>
+                        Role
+                        <span className={styles.wiped}>
+                            <br />
+                            ↳ Logo Design
+                            <br />
+                            ↳ Cover Design
+                            <br />
+                            ↳ Editorial Design
+                            <br />
+                            ↳ Authored
+                        </span>
+                    </div>
+
+                    <div className={styles.chip}>
+                        CBSE has outdated facts and books with dull designs—but I made this to change that. I’ve designed this book to make Informatics Practices more engaging, more immersive, and way more fun to learn. With vibrant graphics and interactive concepts.
+                    </div>
+
+                </div>
+                <div className={styles.bannerwraper}>
+                    <img
+                        src="https://ik.imagekit.io/localstore/Banner%20IPR.png?updatedAt=1749241412373"
+                        draggable="false"
+                        loading="lazy"
+                        className={styles.fullwidthbanner}
+                    />
+                </div>
             </div>
         </div>
 
