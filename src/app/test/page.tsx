@@ -25,7 +25,7 @@ export default function Portfolio() {
                 {/* Main Content */}
                 <main className={styles.main}>
                     <h1 className={styles.heroText}>
-                        <span className={styles.highlight}>I am a Design Engineer and Entrepreneur</span>
+                        <span className={styles.highlight}>I am a Design Engineer and an Entrepreneur</span>
                         <span className={styles.highlight}>, based in </span>
                         <span className={styles.muted}>India</span>
                     </h1>
@@ -185,6 +185,7 @@ export default function Portfolio() {
                         loading="lazy"
                         className={styles.fullwidthbanner}
                     />
+
                 </div>
             </div>
         </div>
