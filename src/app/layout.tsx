@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import '@/styles/global.scss';
 import { SmoothScrollProvider } from "@/utils/scrollprovider";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Supriyo Mahato",
@@ -15,6 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="stylesheet" href="https://use.typekit.net/aaf7wuq.css"></link>
+      </Head>
       <body>
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>
