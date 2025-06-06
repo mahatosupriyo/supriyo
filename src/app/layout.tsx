@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import '@/styles/global.scss';
 import { SmoothScrollProvider } from "@/utils/scrollprovider";
 import Head from "next/head";
