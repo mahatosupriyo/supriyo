@@ -28,7 +28,6 @@ export default function Portfolio() {
                         <span className={styles.highlight}>I am a Design Engineer and Entrepreneur</span>
                         <span className={styles.highlight}>, based in </span>
                         <span className={styles.muted}>India</span>
-                        <span className={styles.highlight}>.</span>
                     </h1>
                 </main>
 
@@ -36,7 +35,7 @@ export default function Portfolio() {
                 <aside className={styles.sidebarRight}>
                     <div className={styles.section}>
                         <div className={styles.title}>Last Update</div>
-                        <div className={styles.item}>April 20 2020</div>
+                        <div className={styles.item}>Jun 06 2025</div>
                     </div>
 
                     <div className={styles.section}>
@@ -65,9 +64,9 @@ export default function Portfolio() {
                 {/* Footer Right */}
                 <section className={styles.footerRight}>
                     <div className={styles.title}>Contact</div>
-                    <a href="/" target="_blank" className={styles.contactItem}>Email</a>
-                    <a href="/" target="_blank" className={styles.contactItem}>LinkedIn</a>
-                    <a href="/" target="_blank" className={styles.contactItem}>Instagram</a>
+                    <a href="mailto:supriyo@outlook.com" target="_blank" className={styles.contactItem}>Email</a>
+                    <a href="https://www.linkedin.com/in/mesupriyomahato" target="_blank" className={styles.contactItem}>LinkedIn</a>
+                    <a href="https://instagram.com/supriyomahato" target="_blank" className={styles.contactItem}>Instagram</a>
                 </section>
 
                 <section className={`${styles.education} ${styles.resumeSection}`}>
