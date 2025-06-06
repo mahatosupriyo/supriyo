@@ -39,10 +39,11 @@ export default function Portfolio() {
                     </div>
 
                     <div className={styles.section}>
-                        <div className={styles.title}>Creations</div>
+                        <div className={styles.title}>Recent Creations</div>
                         <div className={styles.item}>On the Orbit</div>
                         <div className={styles.item}>Edu Burner</div>
                         <div className={styles.item}>Skyvets</div>
+                        <div className={styles.item}>Ember's</div>
                         <div className={styles.item}>Antern</div>
                         <div className={styles.item}>SBL</div>
                     </div>
@@ -87,7 +88,7 @@ export default function Portfolio() {
 
                     <div className={styles.company}>
                         <div className={styles.name}>
-                            On the Orbit <span className={styles.details}>(Remote)</span>
+                            On the Orbit <span className={styles.details}>(Kolkata, IN)</span>
                         </div>
                         <div className={styles.period}>May 2021 - Present</div>
                         <div className={styles.role}>Founder, CTO, Design Head</div>
@@ -103,7 +104,15 @@ export default function Portfolio() {
 
                     <div className={styles.company}>
                         <div className={styles.name}>
-                            Edu Burner <span className={styles.details}>(IN)</span>
+                            Ember's <span className={styles.details}>(Punjab, IN)</span>
+                        </div>
+                        <div className={styles.period}>Dec 2024 - Feb. 2025</div>
+                        <div className={styles.role}>Product Designer</div>
+                    </div>
+
+                    <div className={styles.company}>
+                        <div className={styles.name}>
+                            Edu Burner <span className={styles.details}>(Remote, IN)</span>
                         </div>
                         <div className={styles.period}>Jun. 2023 - June. 2024</div>
                         <div className={styles.role}>Book Designer & Author</div>
