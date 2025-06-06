@@ -1,0 +1,306 @@
+@import './variables';
+
+.wraper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 200rem;
+  min-height: 100vh;
+  background-color: $color-bg;
+  color: $color-text-primary;
+  font-family: $font-mono;
+  font-weight: $font-weight-light;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header header"
+    "sidebar-left main sidebar-right"
+    "footer-left footer-left footer-right"
+    "education history clients";
+  gap: 20rem 4rem;
+  padding: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "sidebar-left"
+      "sidebar-right"
+      "footer-left"
+      "education"
+      "history"
+      "clients"
+      "footer-right";
+    gap: 3.6rem 1.5rem;
+    padding: 2rem;
+  }
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.14rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+  }
+}
+
+.logo {
+  font-weight: $font-weight-normal;
+  font-family: $font-mono;
+
+}
+
+.version {
+  font-family: $font-mono;
+
+  @media (max-width: 768px) {
+    display: none;
+
+  }
+}
+
+.date {
+  font-family: $font-mono;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.time {
+  font-family: $font-mono;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+
+  .line {
+    width: 30px;
+    height: 1px;
+    background-color: $color-text-primary;
+  }
+}
+
+.sidebarLeft {
+  grid-area: sidebar-left;
+  font-size: $mono-size;
+  font-family: $font-mono;
+  line-height: 100%;
+}
+
+.greeting {
+  font-family: inherit;
+  margin-bottom: 1rem;
+  font-size: $mono-size;
+  font-weight: $font-weight-normal;
+}
+
+.main {
+  grid-area: main;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.heroText {
+  font-family: $font-primary;
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+
+  .highlight {
+    color: $color-text-primary;
+  }
+
+  .muted {
+    color: $color-text-secondary;
+  }
+}
+
+.sidebarRight {
+  grid-area: sidebar-right;
+  font-size: $mono-size;
+  font-family: $font-mono;
+  line-height: 1.6;
+  font-size: $mono-size;
+}
+
+.section {
+  margin-bottom: 2rem;
+
+  .title {
+    font-weight: $font-weight-normal;
+    margin-bottom: 0.5rem;
+    font-size: $mono-size;
+    font-family: $font-mono;
+  }
+
+  .item {
+    color: $color-text-muted;
+    margin-bottom: 0.25rem;
+    font-size: $mono-size;
+
+    font-family: $font-mono;
+
+    &::before {
+      content: '↳ ';
+      margin-right: 0.25rem;
+    }
+  }
+}
+
+.footerLeft {
+  grid-area: footer-left;
+  font-size: $mono-size;
+  font-family: $font-mono;
+
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+.footerRight {
+  grid-area: footer-right;
+  font-size: $mono-size;
+  line-height: 1.6;
+
+  .title {
+    font-family: $font-mono;
+    font-size: $mono-size;
+
+    font-weight: $font-weight-normal;
+    margin-bottom: 0.5rem;
+  }
+
+  .contactItem {
+    display: flex;
+    color: $color-text-muted;
+    margin-bottom: 0.25rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    font-family: $font-mono;
+    font-size: $mono-size;
+
+
+    &:hover {
+      color: $color-text-primary;
+    }
+
+    &::before {
+      content: '↳ ';
+      margin-right: 1rem;
+    }
+  }
+}
+
+
+
+
+.education {
+  grid-area: education;
+  font-family: $font-mono;
+  font-size: $mono-size;
+  line-height: 1.6;
+}
+
+.history {
+  grid-area: history;
+  font-family: $font-mono;
+  font-size: $mono-size;
+  line-height: 1.6;
+}
+
+.clients {
+  grid-area: clients;
+  font-family: $font-mono;
+  font-size: $mono-size;
+  line-height: 1.6;
+}
+
+.resumeSection {
+  .title {
+    font-weight: $font-weight-normal;
+    margin-bottom: 1.5rem;
+    font-family: $font-mono;
+    font-size: $mono-size;
+  }
+
+  .institution,
+  .company {
+    margin-bottom: 1.5rem;
+
+    .name {
+      color: $color-text-primary;
+      font-family: $font-mono;
+      font-size: $mono-size;
+      margin-bottom: 0.25rem;
+    }
+
+    .details {
+      font-family: $font-mono;
+      font-size: $mono-size;
+      color: $color-text-muted;
+      margin-bottom: 0.25rem;
+    }
+
+    .period {
+      font-family: $font-mono;
+      font-size: $mono-size;
+      color: $color-text-muted;
+      margin-bottom: 0.25rem;
+    }
+
+    .role {
+      font-family: $font-mono;
+      font-size: $mono-size;
+      color: $color-text-muted;
+
+      &::before {
+        content: '↳ ';
+        margin-right: 0.25rem;
+      }
+    }
+
+    .year {
+      color: $color-text-muted;
+      font-family: $font-mono;
+      font-size: $mono-size;
+
+      &::before {
+        content: '↳ ';
+        margin-right: 0.25rem;
+      }
+    }
+  }
+
+  .clientList {
+    .client {
+      font-family: $font-mono;
+      font-size: $mono-size;
+      color: $color-text-primary;
+      margin-bottom: 0.5rem;
+      font-weight: $font-weight-normal;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+// Font variables
+$font-primary: 'BeauSans', sans-serif;
+$font-mono: 'adapter-mono-pe-variable', sans-serif;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+
+// Color variables
+$color-bg: #000000;
+$color-text-primary: #ffffff;
+$color-text-secondary: #666666;
+$color-text-muted: #999999;
+
+$mono-size: 1.14rem;
+
+// Export variables for use in TypeScript
+:export {
+  fontPrimary: $font-primary;
+  fontMono: $font-mono;
+  fontWeightLight: $font-weight-light;
+  fontWeightNormal: $font-weight-normal;
+  colorBg: $color-bg;
+  colorTextPrimary: $color-text-primary;
+  colorTextSecondary: $color-text-secondary;
+  colorTextMuted: $color-text-muted;
+}
