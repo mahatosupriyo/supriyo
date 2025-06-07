@@ -165,13 +165,13 @@ export default function Portfolio() {
                         Role
                         <span className={styles.wiped}>
                             <br />
-                            ↳ Logo Design
+                            · Logo Design
                             <br />
-                            ↳ Cover Design
+                            · Cover Design
                             <br />
-                            ↳ Editorial Design
+                            · Editorial Design
                             <br />
-                            ↳ Authored
+                            · Authored
                         </span>
                     </div>
 

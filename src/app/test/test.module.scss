@@ -126,7 +126,7 @@
 
 .heroText {
   font-family: $font-primary;
-  font-family: 'interstate condensed';
+  // font-family: 'interstate condensed';
   font-size: clamp(2.5rem, 8vw, 6rem);
   font-weight: 400;
   line-height: 120%;
@@ -382,7 +382,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
   gap: 4rem 4rem;
-  padding: 4rem 2.6rem;
+  padding: 6rem 2.6rem;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
