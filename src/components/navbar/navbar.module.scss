@@ -1,0 +1,36 @@
+@use '/src/styles/variables';
+@import '/src/styles/variables';
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.6rem 2.6rem;
+    mix-blend-mode: difference;
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+
+    .logo {
+        font-weight: $font-weight-normal;
+        font-family: $font-mono;
+        color: #fff;
+    }
+
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        cursor: pointer;
+
+        .line {
+            width: 30px;
+            height: 1.5px;
+            background-color: $color-text-primary;
+        }
+    }
+}

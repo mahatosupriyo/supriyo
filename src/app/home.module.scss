@@ -1,195 +1,259 @@
-@use '../styles/essentials';
-@import '../styles/essentials';
-
-$background: hsl(0, 0%, 1010%);
-$font-size: 1.6rem;
-$color: #121212;
+@use '/src/styles/variables';
+@import '/src/styles/variables';
 
 .wraper {
+    display: flex;
     width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
     flex-direction: column;
-    background-color: $background;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 200rem;
     min-height: 100vh;
-    padding-bottom: 6rem;
+    background-color: $color-bg;
+    color: $color-text-primary;
+    font-family: $font-mono;
+    font-weight: $font-weight-light;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header header"
+        "sidebar-left main sidebar-right"
+        "footer-left footer-left footer-right"
+        "education history clients";
+    gap: 20rem 4rem;
+    padding: 2.6rem 2.6rem;
 
-    .container {
-        width: 100%;
-        max-width: 200rem;
-        display: flex;
-        flex-direction: column;
-        gap: 10rem;
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar-left"
+            "sidebar-right"
+            "footer-left"
+            "education"
+            "history"
+            "clients"
+            "footer-right";
+        gap: 6rem 1.5rem;
+        padding: 2rem;
     }
 }
 
-.navbar {
+
+
+.sidebarLeft {
+    grid-area: sidebar-left;
+    font-size: $mono-size;
+    font-family: $font-mono;
+    line-height: 100%;
+}
+
+.greeting {
+    font-family: inherit;
+    margin-bottom: 1rem;
+    font-size: $mono-size;
+    font-weight: $font-weight-normal;
+}
+
+.main {
+    grid-area: main;
     display: flex;
     align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 4rem;
+    justify-content: center;
+    text-align: left;
+}
 
-    .rightpanel {
-        width: 50%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(1, minmax(10px, auto)); // adjust for height
-        gap: 35px;
+.heroText {
+    font-family: $font-primary;
+    // font-family: 'interstate condensed';
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+
+    .highlight {
+        color: $color-text-primary;
+    }
+
+    .muted {
+        color: $color-text-secondary;
     }
 }
 
-.title {
-    font-size: $font-size;
-    font-weight: 700;
-    line-height: 110%;
-    color: $color;
+.sidebarRight {
+    grid-area: sidebar-right;
+    font-size: $mono-size;
+    font-family: $font-mono;
+    line-height: 1.6;
+    font-size: $mono-size;
 }
 
-.link {
-    font-size: $font-size;
-    font-weight: 700;
-    color: $color;
+.section {
+    margin-bottom: 2rem;
 
-    line-height: 110%;
-    cursor: pointer;
-    user-select: none;
-}
-
-.paragraph {
-    // font-size: $font-size;
-    font-size: 1.56rem;
-
-    font-weight: 700;
-    color: $color;
-
-    line-height: 110%;
-    user-select: none;
-}
-
-
-.hero {
-    display: flex;
-    flex-direction: column;
-    gap: 6rem;
-    padding: 6rem 4rem;
-
-    .underline {
-        width: 100%;
-        height: 0.16rem;
-        background-color: $color;
-        opacity: 0.1;
+    .title {
+        font-weight: $font-weight-normal;
+        margin-bottom: 0.5rem;
+        font-size: $mono-size;
+        font-family: $font-mono;
     }
 
-    .herotitle {
-        font-size: 5rem;
-        line-height: 130%;
-        color: $color;
-        font-weight: 700;
-
-        .spanprefix {
-            display: inline-flex;
-            font-size: 1.56rem;
-            margin-right: 20%;
-            font-weight: 700;
-            line-height: 100%;
-            margin-bottom: 1rem;
-        }
-    }
-
-    .herodescription {
+    .item {
+        color: $color-text-muted;
+        margin-bottom: 0.25rem;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        font-size: $mono-size;
 
-        .creator {
-            aspect-ratio: 4/5;
-            display: flex;
-            object-fit: cover;
-            pointer-events: none;
-            user-select: none;
-            height: 28rem;
+        text-decoration: none;
+        font-family: $font-mono;
+        transition: 0.1s ease-in-out;
+
+        :hover {
+            text-decoration: underline;
         }
 
-        .rightpanel {
-            display: flex;
-            width: 50%;
-            flex-direction: row;
-            justify-content: space-between;
+        &::before {
+            content: '↳ ';
+            margin-right: 1.4rem;
+        }
+    }
+}
 
-            .leftwraper {
-                display: flex;
-                flex-direction: column;
-                gap: 3rem;
-                width: 50%;
-                padding-right: 6rem;
+.footerLeft {
+    grid-area: footer-left;
+    font-size: $mono-size;
+    font-family: $font-mono;
 
-                .subtitle {
-                    font-size: 2.4rem;
-                    line-height: 120%;
-                    color: $color;
-                    font-weight: 700;
-                }
+    line-height: 1.6;
+    max-width: 400px;
+}
 
-                .description {
-                    font-size: 1.7rem;
-                    line-height: 120%;
-                    color: $color;
-                    color: hsl(0, 0%, 64%);
-                    font-weight: 500;
-                }
+.footerRight {
+    grid-area: footer-right;
+    font-size: $mono-size;
+    line-height: 1.6;
+
+    .title {
+        font-family: $font-mono;
+        font-size: $mono-size;
+
+        font-weight: $font-weight-normal;
+        margin-bottom: 0.5rem;
+    }
+
+    .contactItem {
+        display: flex;
+        color: $color-text-muted;
+        margin-bottom: 0.25rem;
+        cursor: pointer;
+        transition: color 0.2s ease;
+        font-family: $font-mono;
+        font-size: $mono-size;
+
+
+        &:hover {
+            color: $color-text-primary;
+        }
+
+        &::before {
+            content: '↳ ';
+            margin-right: 1rem;
+        }
+    }
+}
+
+
+
+
+.education {
+    grid-area: education;
+    font-family: $font-mono;
+    font-size: $mono-size;
+    line-height: 1.6;
+}
+
+.history {
+    grid-area: history;
+    font-family: $font-mono;
+    font-size: $mono-size;
+    line-height: 1.6;
+}
+
+.clients {
+    grid-area: clients;
+    font-family: $font-mono;
+    font-size: $mono-size;
+    line-height: 1.6;
+}
+
+.resumeSection {
+    .title {
+        font-weight: $font-weight-normal;
+        margin-bottom: 1.5rem;
+        font-family: $font-mono;
+        font-size: $mono-size;
+    }
+
+    .institution,
+    .company {
+        margin-bottom: 1.5rem;
+
+        .name {
+            color: $color-text-primary;
+            font-family: $font-mono;
+            font-size: $mono-size;
+            margin-bottom: 0.25rem;
+        }
+
+        .details {
+            font-family: $font-mono;
+            font-size: $mono-size;
+            color: $color-text-muted;
+            margin-bottom: 0.25rem;
+        }
+
+        .period {
+            font-family: $font-mono;
+            font-size: $mono-size;
+            color: $color-text-muted;
+            margin-bottom: 0.25rem;
+        }
+
+        .role {
+            font-family: $font-mono;
+            font-size: $mono-size;
+            color: $color-text-muted;
+
+            &::before {
+                content: '↳ ';
+                margin-right: 0.25rem;
             }
+        }
 
-            .rightwraper {
-                display: flex;
-                width: 50%;
-                flex-direction: column;
-                gap: 5rem;
+        .year {
+            color: $color-text-muted;
+            font-family: $font-mono;
+            font-size: $mono-size;
 
-                .popularprojects {
-                    display: flex;
-                    flex-direction: column;
-
-
-                    .projectlink {
-                        position: relative;
-                        padding: 1.4rem 0rem;
-                        font-size: 1.7rem;
-                        font-weight: 600;
-                        text-decoration: none;
-                        z-index: 1;
-                        border-bottom: 0.18rem solid hsl(0, 0%, 90%);
-                        color: $color;
-                        @include smooth;
-
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-
-                        &:hover {
-                            padding-left: 0.6rem;
-                            border-bottom: 0.18rem solid hsl(0, 0%, 60%);
-                            // color: #121212;
-                            color: #a2a2a2;
-
-
-                            .linkicon {
-                                padding-right: 0.6rem;
-                                fill: hsl(0, 0%, 20%);
-                            }
-                        }
-
-                        .linkicon {
-                            @include smooth;
-                            height: 2.2rem;
-                            fill: hsl(0, 0%, 64%);
-                        }
-                    }
-                }
+            &::before {
+                content: '↳ ';
+                margin-right: 0.25rem;
             }
+        }
+    }
 
-
+    .clientList {
+        .client {
+            font-family: $font-mono;
+            font-size: $mono-size;
+            color: $color-text-primary;
+            margin-bottom: 0.5rem;
+            font-weight: $font-weight-normal;
         }
     }
 }

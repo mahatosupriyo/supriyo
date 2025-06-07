@@ -1,199 +1,143 @@
 "use client"
+import React from "react";
+import styles from "./home.module.scss"
+import EduBurner from "./(creations)/eduburner/eduburner";
+import NavBar from "@/components/navbar/navbar";
+import Link from "next/link";
 
-import styles from "@/app/home.module.scss"
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { useEffect, useState } from "react"
+export default function Portfolio() {
 
-export default function Home() {
-  const [isLoaded, setIsLoaded] = useState(false)
+    return (
+        <div className={styles.wraper}>
+            <div className={styles.container}>
+                <NavBar />
 
-  useEffect(() => {
-    setIsLoaded(true)
-  }, [])
+                {/* Left Sidebar */}
+                <aside className={styles.sidebarLeft}>
+                    <div className={styles.greeting}>Hello!</div>
+                    <div className={styles.greeting}>My name is Supriyo Mahato.</div>
+                </aside>
 
-  // Staggered animation for navbar items
-  const navbarVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.4,
-        ease: "easeOut",
-        staggerChildren: 0.2,
-        delayChildren: 0.4,
-      },
-    },
-  }
+                {/* Main Content */}
+                <main className={styles.main}>
+                    <h1 className={styles.heroText}>
+                        <span className={styles.highlight}>I am a Design Engineer and an Entrepreneur</span>
+                        <span className={styles.highlight}>, based in </span>
+                        <span className={styles.muted}>India</span>
+                    </h1>
+                </main>
 
-  // Staggered animation for hero content
-  const heroVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.4,
-        ease: "easeInOut",
-      },
-    },
-  }
+                {/* Right Sidebar */}
+                <aside className={styles.sidebarRight}>
+                    <div className={styles.section}>
+                        <div className={styles.title}>Last Update</div>
+                        <div className={styles.item}>Jun 06 2025</div>
+                    </div>
+
+                    <div className={styles.section}>
+                        <div className={styles.title}>Recent Creations</div>
+                        <Link href="/" className={styles.item}>On the Orbit</Link>
+                        <Link href="/eduburner" className={styles.item}>Edu Burner</Link>
+                        <Link href="/" className={styles.item}>Skyvets</Link>
+                        <Link href="/" className={styles.item}>Ember's</Link>
+                        <Link href="/" className={styles.item}>Antern</Link>
+                        <Link href="/" className={styles.item}>SBL</Link>
+                    </div>
+                </aside>
+
+                {/* Footer Left */}
+                <section className={styles.footerLeft}>
+
+                    A designer from India with 5+ years of crafting visuals that connect.
+                    <br />
+                    <br />
+                    I’ve mentored 100+ folks kickstart their creative journeys, and nothing makes me happier than seeing someone win.
+                    <br />
+                    <br />
+                    off-work? you’ll find me chasing music, on the road, or just soaking in the world to bring it back into my work.
+
+                </section>
+
+                {/* Footer Right */}
+                <section className={styles.footerRight}>
+                    <div className={styles.title}>Contact</div>
+                    <a href="mailto:supriyo@outlook.com" target="_blank" className={styles.contactItem}>Email</a>
+                    <a href="https://www.linkedin.com/in/mesupriyomahato" target="_blank" className={styles.contactItem}>LinkedIn</a>
+                    <a href="https://instagram.com/supriyomahato" target="_blank" className={styles.contactItem}>Instagram</a>
+                </section>
+
+                <section className={`${styles.education} ${styles.resumeSection}`}>
+                    <div className={styles.title}>Education</div>
+
+                    <div className={styles.institution}>
+                        <div className={styles.name}>Sister Nivedita University</div>
+                        <div className={styles.details}>Kolkata, IN</div>
+                        <div className={styles.details}>B.Design, Communication Design</div>
+                        {/* <div className={styles.year}>2009</div> */}
+                    </div>
+
+                </section>
+
+                {/* Recent History Section */}
+                <section className={`${styles.history} ${styles.resumeSection}`}>
+                    <div className={styles.title}>Recent History</div>
+
+                    <div className={styles.company}>
+                        <div className={styles.name}>
+                            On the Orbit <span className={styles.details}>(Kolkata, IN)</span>
+                        </div>
+                        <div className={styles.period}>May 2021 - Present</div>
+                        <div className={styles.role}>Founder, CTO, Design Head</div>
+                    </div>
+
+                    <div className={styles.company}>
+                        <div className={styles.name}>
+                            SkyVets <span className={styles.details}>(Punjab, IN)</span>
+                        </div>
+                        <div className={styles.period}>Jan 2025 - Feb. 2025</div>
+                        <div className={styles.role}>Designer (Freelance)</div>
+                    </div>
+
+                    <div className={styles.company}>
+                        <div className={styles.name}>
+                            Ember's <span className={styles.details}>(Punjab, IN)</span>
+                        </div>
+                        <div className={styles.period}>Dec 2024 - Feb. 2025</div>
+                        <div className={styles.role}>Product Designer</div>
+                    </div>
+
+                    <div className={styles.company}>
+                        <div className={styles.name}>
+                            Edu Burner <span className={styles.details}>(Remote, IN)</span>
+                        </div>
+                        <div className={styles.period}>Jun. 2023 - June. 2024</div>
+                        <div className={styles.role}>Book Designer & Author</div>
+                    </div>
+
+                    <div className={styles.company}>
+                        <div className={styles.name}>
+                            Second Brain Labs <span className={styles.details}>(Bangalore, IN)</span>
+                        </div>
+                        <div className={styles.period}>Dec. 2024 - Jan 2025</div>
+                        <div className={styles.role}>Product Designer</div>
+                    </div>
+
+                    <div className={styles.company}>
+                        <div className={styles.name}>
+                            Antern <span className={styles.details}>(Bangalore, IN)</span>
+                        </div>
+                        <div className={styles.period}>Jun. 2020 - Jun. 2024</div>
+                        <div className={styles.role}>UX Designer</div>
+                    </div>
 
 
 
-  const heroItemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.4,
-        ease: "easeInOut",
-      },
-    },
-  }
+                </section>
 
-  // Animation for project links
-  const projectLinkVariants = {
-    hidden: { opacity: 0, x: -10 },
-    visible: (i: number) => ({
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.5,
-        delay: 1 + i * 0.1,
-        ease: "easeOut",
-      },
-    }),
-  }
-
-  // Animation for the underline
-  const underlineVariants = {
-    hidden: { width: "0%" },
-    visible: {
-      width: "100%",
-      transition: {
-        duration: 1.2,
-        ease: "easeInOut",
-        delay: 0.8,
-      },
-    },
-  }
-
-
-  return (
-    <>
-      <div className={styles.wraper}>
-        <div className={styles.container}>
-
-          <motion.div
-            className={styles.navbar}
-            initial="hidden"
-            animate={isLoaded ? "visible" : "hidden"}
-            variants={navbarVariants}
-          >
-            <motion.h1 className={styles.title} style={{display: 'flex', flexDirection: "row", alignItems: "flex-start"}} variants={navbarVariants}>
-              Supriyo Mahato<span style={{fontSize: '1rem', paddingLeft: '0.3rem', lineHeight: '100%', opacity: 0.4}}>IN</span>
-            </motion.h1>
-            <div className={styles.rightpanel}>
-              <motion.h1
-                className={styles.link}
-                variants={navbarVariants}
-                whileTap={{ scale: 0.98 }}
-
-              >
-                Creations I made
-              </motion.h1>
-              <motion.div
-                className={styles.link}
-                variants={navbarVariants}
-                whileTap={{ scale: 0.98 }}
-              >
-                Contact me
-              </motion.div>
             </div>
-          </motion.div>
+            <EduBurner />
 
-          <motion.div
-            className={styles.hero}
-            initial="hidden"
-            animate={isLoaded ? "visible" : "hidden"}
-            variants={heroVariants}
-          >
-            <motion.h1 className={styles.herotitle} variants={heroItemVariants}>
-              <motion.span className={styles.spanprefix} variants={heroItemVariants}>
-                (About me)
-              </motion.span>
-              Product designer and mentor, blending storytelling with systems that scale.
-            </motion.h1>
-
-            <motion.span className={styles.underline} variants={underlineVariants}></motion.span>
-
-            <motion.div className={styles.herodescription} variants={heroItemVariants}>
-              <motion.img
-                src="https://i.ibb.co/8g2TsgFb/image-1.png"
-                className={styles.creator}
-                variants={heroItemVariants}
-                initial={{ opacity: 0, scale: 0.9 }}
-                draggable="false"
-                animate={{
-                  opacity: 1,
-                  scale: 1,
-                  transition: {
-                    duration: 0.2,
-                    delay: 0.6,
-                    ease: "easeInOut",
-                  },
-                }}
-                whileHover={{ scale: 1.03 }}
-              />
-
-              <div className={styles.rightpanel}>
-                <div className={styles.leftwraper}>
-                  <motion.h3 className={styles.subtitle} variants={heroItemVariants}>
-                    Shaping products with heart, logic, and 6+ years of grind.
-                  </motion.h3>
-                </div>
-
-                <div className={styles.rightwraper}>
-                  <motion.p className={styles.paragraph} variants={heroItemVariants}>
-                    (Creations)
-                  </motion.p>
-                  <div className={styles.popularprojects}>
-                    {["Antern", "Skyvets", "Ember's", "Edu Burner", "SBL"].map((project, i) => (
-                      <motion.div
-                        key={project}
-                        variants={projectLinkVariants}
-                        custom={i}
-                        initial="hidden"
-                        animate={isLoaded ? "visible" : "hidden"}
-                      >
-                        <motion.div whileHover="hover" initial="initial">
-                          <Link className={styles.projectlink} href="/">
-
-                            {project}
-
-                            <motion.svg
-                              className={styles.linkicon}
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 40 40"
-                            >
-                              <path d="M13 26.6429L14.3571 28L27.9277 14.4294L26.5706 13.0723L13 26.6429Z" />
-                              <path d="M26.0808 13V27.3938H28V13H26.0808Z" />
-                              <path d="M13.6062 13V14.9192H28V13L13.6062 13Z" />
-                            </motion.svg>
-                          </Link>
-                        </motion.div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
         </div>
-      </div>
-    </>
-  )
+
+    )
 }
