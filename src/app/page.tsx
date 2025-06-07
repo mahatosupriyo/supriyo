@@ -40,7 +40,7 @@ export default function Portfolio() {
                         <Link href="/" className={styles.item}>On the Orbit</Link>
                         <Link href="/eduburner" className={styles.item}>Edu Burner</Link>
                         <Link href="/" className={styles.item}>Skyvets</Link>
-                        <Link href="/" className={styles.item}>Ember's</Link>
+                        <Link href="/embers" className={styles.item}>Ember's</Link>
                         <Link href="/" className={styles.item}>Antern</Link>
                         <Link href="/" className={styles.item}>SBL</Link>
                     </div>
@@ -62,7 +62,7 @@ export default function Portfolio() {
                 {/* Footer Right */}
                 <section className={styles.footerRight}>
                     <div className={styles.title}>Contact</div>
-                    <a href="mailto:supriyo@outlook.com" target="_blank" className={styles.contactItem}>Email</a>
+                    <a href="mailto:supriyo@ontheorbit.com" target="_blank" className={styles.contactItem}>Email</a>
                     <a href="https://www.linkedin.com/in/mesupriyomahato" target="_blank" className={styles.contactItem}>LinkedIn</a>
                     <a href="https://instagram.com/supriyomahato" target="_blank" className={styles.contactItem}>Instagram</a>
                 </section>
