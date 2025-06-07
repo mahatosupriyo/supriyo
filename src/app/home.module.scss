@@ -44,8 +44,6 @@
     }
 }
 
-
-
 .sidebarLeft {
     grid-area: sidebar-left;
     font-size: $mono-size;
@@ -111,10 +109,9 @@
 
         text-decoration: none;
         font-family: $font-mono;
-        transition: 0.1s ease-in-out;
 
         :hover {
-            text-decoration: underline;
+            color: $color-text-primary;
         }
 
         &::before {
@@ -166,9 +163,6 @@
         }
     }
 }
-
-
-
 
 .education {
     grid-area: education;

@@ -4,6 +4,7 @@ import styles from "./home.module.scss"
 import EduBurner from "./(creations)/eduburner/eduburner";
 import NavBar from "@/components/navbar/navbar";
 import Link from "next/link";
+import Embers from "./(creations)/embers/embers";
 
 export default function Portfolio() {
 
@@ -136,6 +137,7 @@ export default function Portfolio() {
 
             </div>
             <EduBurner />
+            <Embers/>
 
         </div>
 
