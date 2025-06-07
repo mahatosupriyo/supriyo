@@ -1,6 +1,8 @@
 "use client"
 import React from "react";
 import styles from "./test.module.scss"
+import burnerLoader from '../../../public/Essentials/lottie/burner.json';
+import Lottie from "lottie-react";
 
 export default function Portfolio() {
 
@@ -185,6 +187,59 @@ export default function Portfolio() {
                         loading="lazy"
                         className={styles.fullwidthbanner}
                     />
+                </div>
+
+                <div className={styles.logowrapers}>
+
+
+                    <div className={styles.chip}>
+                        Logo breakdown
+                        <span className={styles.wiped}>
+                            <br />
+                            ↳ beautifully structured, modern design with a strong, educational feel that reflects adaptability and clarity.
+                        </span>
+                    </div>
+
+                    <div className={styles.sqwraper}>
+                        <Lottie animationData={burnerLoader} style={{ height: '100%', padding: '6rem', aspectRatio: '1/1', background: '#2165E8', width: '100%' }} autoplay loop />
+                    </div>
+
+                    <div className={styles.holder}>
+
+
+
+                        <div className={styles.chip}>
+                            Features
+                            <span className={styles.wiped}>
+                                <br />
+                                ↳ Minimalism
+                                <br />
+                                Reinforces the idea of structure and systematic learning
+                                <br />
+                                ↳ Geometry
+                                <br />
+                                The clean lines and geometric forms are reminiscent of building blocks or learning modules, symbolizing knowledge construction.
+                                <br />
+                                ↳ Responsiveness
+                                <br />
+                                ↳ Both digital and print contexts kept in mind
+
+                            </span>
+                        </div>
+
+
+
+                    </div>
+
+
+                    {/* <div className={styles.sqwraper}>
+
+                        <img src="https://ik.imagekit.io/localstore/FAV.png?updatedAt=1749291206409"
+                            className={styles.sqimg}
+                            draggable="false"
+                        />
+                    </div> */}
+
 
                 </div>
             </div>
