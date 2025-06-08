@@ -183,6 +183,54 @@ export default function EduBurner() {
                 </div>
 
             </div>
+
+            <div className={styles.compheader}>
+                <span className={styles.chip}>
+                    Search Bar Component
+                    <div className={styles.wiped}>
+                        ↳ Used Atomic Design Principles to create a reusable Search Bar Component.
+                    </div>
+                </span>
+
+                <span className={styles.chip}>
+                    Settings Component
+                </span>
+            </div>
+
+            <div className={styles.screens}>
+
+                <img src="https://ik.imagekit.io/localstore/Search.svg?updatedAt=1749412941638"
+                    className={styles.screen} draggable="false"
+                />
+
+                <img src="https://ik.imagekit.io/localstore/GHA.svg?updatedAt=1749412580759"
+                    className={styles.screen} draggable="false"
+                />
+
+            </div>
+
+
+            <div className={styles.screens} style={{ paddingTop: '10rem' }}>
+
+                <img src="https://ik.imagekit.io/localstore/icons/Diwali.png?updatedAt=1749413384551"
+                    className={styles.screen} draggable="false"
+                />
+
+                <img src="https://ik.imagekit.io/localstore/icons/Great.png?updatedAt=1749413710550"
+                    className={styles.screen} draggable="false" />
+
+                <div className={styles.instascreens}>
+                    <img src="https://ik.imagekit.io/localstore/icons/Launch.png?updatedAt=1749413385554"
+                        className={styles.instascreen} draggable="false"
+                    />
+
+                    <img src="https://ik.imagekit.io/localstore/icons/Quote.png?updatedAt=1749413912980"
+                        className={styles.instascreen} draggable="false"
+                    />
+                </div>
+
+
+            </div>
         </div>
     )
 }

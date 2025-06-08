@@ -83,6 +83,74 @@
   }
 }
 
+
+.compheader {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem 4rem;
+  padding: 4rem 2.6rem 1rem 2.6rem;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+.screens {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem 4rem;
+  padding: 1rem 2.6rem;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .screen {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    user-select: none;
+    object-fit: cover;
+    object-position: left;
+    pointer-events: none;
+
+  }
+
+  .instascreens {
+    // width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem 4rem;
+
+    @media (max-width: 800px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+  }
+
+  .instascreen {
+    // height: 100%;
+    width: 100%;
+    aspect-ratio: 4/5;
+    display: flex;
+
+    user-select: none;
+    object-fit: cover;
+    object-position: left;
+    pointer-events: none;
+  }
+
+}
+
+
+
 .iconvariablewraper {
   width: 100%;
   display: grid;
