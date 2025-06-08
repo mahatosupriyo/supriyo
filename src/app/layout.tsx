@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import '@/styles/global.scss';
-// import { SmoothScrollProvider } from "@/utils/scrollprovider";
+import { SmoothScrollProvider } from "@/utils/scrollprovider";
 import Head from "next/head";
 
 export const metadata: Metadata = {
@@ -19,9 +19,9 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://use.typekit.net/aaf7wuq.css"></link>
       </Head>
       <body>
-        {/* <SmoothScrollProvider> */}
+        <SmoothScrollProvider>
         {children}
-        {/* </SmoothScrollProvider> */}
+        </SmoothScrollProvider>
       </body>
     </html>
   );

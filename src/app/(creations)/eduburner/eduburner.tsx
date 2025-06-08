@@ -1,4 +1,5 @@
 "use client"
+
 import styles from './eduburner.module.scss'
 import Lottie from 'lottie-react'
 import burnerLoader from '../../../../public/Essentials/lottie/burner.json';
@@ -6,6 +7,8 @@ import icons from '../../../../public/Essentials/lottie/icons.json';
 import CodeDisplay from './editor';
 
 export default function EduBurner() {
+
+
     return (
         <div className={styles.eduburner}>
             <div className={styles.projectheader}>
