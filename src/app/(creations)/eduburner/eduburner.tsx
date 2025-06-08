@@ -2,6 +2,7 @@
 import styles from './eduburner.module.scss'
 import Lottie from 'lottie-react'
 import burnerLoader from '../../../../public/Essentials/lottie/burner.json';
+import icons from '../../../../public/Essentials/lottie/icons.json';
 
 export default function EduBurner() {
     return (
@@ -104,6 +105,47 @@ export default function EduBurner() {
                     </div> */}
 
 
+            </div>
+
+            <div className={styles.iconwraper}>
+                <Lottie animationData={icons} style={{ height: '100%', padding: '0rem', aspectRatio: '1/1', width: '100%' }} autoplay loop />
+                <div className={styles.individualset}>
+                    <img
+                        src="https://ik.imagekit.io/localstore/icons/1.png?updatedAt=1749376645508"
+                        draggable="false"
+                        className={styles.iconimg}
+                    />
+
+                    <img
+                        src="https://ik.imagekit.io/localstore/icons/2.png?updatedAt=1749376645508"
+                        draggable="false"
+                        className={styles.iconimg}
+                    />
+
+                    <img
+                        src="https://ik.imagekit.io/localstore/icons/3.png?updatedAt=1749376645508"
+                        draggable="false"
+                        className={styles.iconimg}
+                    />
+
+                    <img
+                        src="https://ik.imagekit.io/localstore/icons/4.png?updatedAt=1749376645508"
+                        draggable="false"
+                        className={styles.iconimg}
+                    />
+
+                    <img
+                        src="https://ik.imagekit.io/localstore/icons/5.png?updatedAt=1749376645508"
+                        draggable="false"
+                        className={styles.iconimg}
+                    />
+
+                    <img
+                        src="https://ik.imagekit.io/localstore/icons/6.png?updatedAt=1749376645508"
+                        draggable="false"
+                        className={styles.iconimg}
+                    />
+                </div>
             </div>
         </div>
     )

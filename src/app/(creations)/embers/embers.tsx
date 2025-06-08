@@ -111,6 +111,28 @@ export default function Embers() {
 
             </div>
 
+            <div className={styles.videoheader}>
+                <span className={styles.chip}>
+                    Tools used
+                    <span className={styles.wiped}>
+                        <br />
+                        ↳ Next.js
+                        <br />
+                        ↳ GSAP
+                        <br />
+                        ↳ Florafauna AI
+                    </span>
+                </span>
+
+                <span className={styles.chip}>
+                    Built with scalability in mind, styling using SCSS variables for scalability.
+                    <br />
+                    {/* <span className={styles.wiped}>
+                        ↳ View Code Github
+                    </span> */}
+                </span>
+            </div>
+
             <div className={styles.videowraper}>
                 <BackgroundVideo
                     draggable="false"
