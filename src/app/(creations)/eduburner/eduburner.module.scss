@@ -69,6 +69,42 @@
   color: hsl(0, 0, 40%);
 }
 
+.iconsetheader {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem 4rem;
+  padding: 1rem 2.6rem;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+.iconvariablewraper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem 4rem;
+  padding: 1rem 2.6rem;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .varimg {
+    width: 100%;
+    display: flex;
+    user-select: none;
+    pointer-events: none;
+  }
+
+}
+
 .logowrapers {
   width: 100%;
   display: grid;
@@ -139,7 +175,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
     gap: 2rem;
-    align-content:baseline;
+    align-content: baseline;
 
     .iconimg {
       aspect-ratio: 1/1;

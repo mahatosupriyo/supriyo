@@ -18,10 +18,10 @@ export default function EduBurner() {
                 </div>
 
                 <div className={styles.chip}>
-                    IPR for class XII CBSE
+                    IPR Book & Platform
                     <br />
                     <span className={styles.wiped}>
-                        ↳ Wrote & Designed
+                        ↳ Designed & Built from scratch
                     </span>
                 </div>
 
@@ -33,9 +33,8 @@ export default function EduBurner() {
                         <br />
                         · Cover Design
                         <br />
-                        · Editorial Design
+                        · Design System for Platform
                         <br />
-                        · Authored
                     </span>
                 </div>
 
@@ -107,6 +106,20 @@ export default function EduBurner() {
 
             </div>
 
+            <div className={styles.iconsetheader}>
+                <span className={styles.chip}>
+                    Icon Set
+                </span>
+
+                <span className={styles.chip}>
+                    Created Instances and States for each Icons in Figma.
+                    <br />
+                    <span className={styles.wiped}>
+                        Further in code created Icon Component with props to change the state, size, color of the icon.
+                    </span>
+                </span>
+            </div>
+
             <div className={styles.iconwraper}>
                 <Lottie animationData={icons} style={{ height: '100%', padding: '0rem', aspectRatio: '1/1', width: '100%' }} autoplay loop />
                 <div className={styles.individualset}>
@@ -146,6 +159,27 @@ export default function EduBurner() {
                         className={styles.iconimg}
                     />
                 </div>
+            </div>
+
+            <div className={styles.iconsetheader}>
+                <span className={styles.chip}>
+                    Figma Instances
+                </span>
+
+                <span className={styles.chip}>
+                    Icon Component with props to change the state, size, color of the icon.
+                </span>
+            </div>
+
+
+            <div className={styles.iconvariablewraper}>
+                <img src="https://ik.imagekit.io/localstore/icons/v1.png?updatedAt=1749378182685"
+                    className={styles.varimg} draggable="false"
+                />
+
+                <img src="https://ik.imagekit.io/localstore/icons/v2.png?updatedAt=1749378182685"
+                    className={styles.varimg} draggable="false"
+                />
             </div>
         </div>
     )
