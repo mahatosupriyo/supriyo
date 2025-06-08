@@ -178,7 +178,7 @@ export default function EduBurner() {
                     className={styles.varimg} draggable="false"
                 />
 
-                <div style={{ display: 'flex', padding: 0, margin: 0, height: '100%', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
+                <div style={{ display: 'flex', padding: 0, margin: 0, height: '100%', minHeight: '40rem', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
                     <CodeDisplay />
                 </div>
 
