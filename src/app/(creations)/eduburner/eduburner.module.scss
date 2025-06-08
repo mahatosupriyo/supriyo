@@ -91,15 +91,18 @@
   gap: 1rem 4rem;
   padding: 1rem 2.6rem;
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
 
   .varimg {
+    height: 100%;
     width: 100%;
     display: flex;
     user-select: none;
+    object-fit: cover;
+    object-position: right;
     pointer-events: none;
   }
 

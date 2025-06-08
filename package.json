@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
     "framer-motion": "^12.7.4",
     "lenis": "^1.2.3",
     "lottie-react": "^2.4.1",

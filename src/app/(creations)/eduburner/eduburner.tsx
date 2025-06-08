@@ -3,6 +3,7 @@ import styles from './eduburner.module.scss'
 import Lottie from 'lottie-react'
 import burnerLoader from '../../../../public/Essentials/lottie/burner.json';
 import icons from '../../../../public/Essentials/lottie/icons.json';
+import CodeDisplay from './editor';
 
 export default function EduBurner() {
     return (
@@ -177,9 +178,10 @@ export default function EduBurner() {
                     className={styles.varimg} draggable="false"
                 />
 
-                <img src="https://ik.imagekit.io/localstore/icons/v2.png?updatedAt=1749378182685"
-                    className={styles.varimg} draggable="false"
-                />
+                <div style={{ display: 'flex', padding: 0, margin: 0, height: '100%', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
+                    <CodeDisplay />
+                </div>
+
             </div>
         </div>
     )
