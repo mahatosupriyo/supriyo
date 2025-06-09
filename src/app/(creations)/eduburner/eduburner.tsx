@@ -98,16 +98,6 @@ export default function EduBurner() {
 
                 </div>
 
-
-                {/* <div className={styles.sqwraper}>
-
-                        <img src="https://ik.imagekit.io/localstore/FAV.png?updatedAt=1749291206409"
-                            className={styles.sqimg}
-                            draggable="false"
-                        />
-                    </div> */}
-
-
             </div>
 
             <div className={styles.iconsetheader}>
@@ -165,7 +155,7 @@ export default function EduBurner() {
                 </div>
             </div>
 
-            <div className={styles.iconsetheader}>
+            {/* <div className={styles.iconsetheader}>
                 <span className={styles.chip}>
                     Figma Instances
                 </span>
@@ -185,7 +175,7 @@ export default function EduBurner() {
                     <CodeDisplay />
                 </div>
 
-            </div>
+            </div> */}
 
             <div className={styles.compheader}>
                 <span className={styles.chip}>
