@@ -155,7 +155,7 @@ export default function EduBurner() {
                 </div>
             </div>
 
-            {/* <div className={styles.iconsetheader}>
+            <div className={styles.iconsetheader}>
                 <span className={styles.chip}>
                     Figma Instances
                 </span>
@@ -175,9 +175,9 @@ export default function EduBurner() {
                     <CodeDisplay />
                 </div>
 
-            </div> */}
+            </div>
 
-            <div className={styles.compheader}>
+            {/* <div className={styles.compheader}>
                 <span className={styles.chip}>
                     Search Bar Component
                     <div className={styles.wiped}>
@@ -200,7 +200,7 @@ export default function EduBurner() {
                     className={styles.screen} draggable="false"
                 />
 
-            </div>
+            </div> */}
 
 
             <div className={styles.screens} style={{ paddingTop: '10rem' }}>
