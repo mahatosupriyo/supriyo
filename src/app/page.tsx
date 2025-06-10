@@ -2,7 +2,6 @@
 import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-
 import styles from "./home.module.scss"
 import EduBurner from "./(creations)/eduburner/eduburner";
 import NavBar from "@/components/navbar/navbar";

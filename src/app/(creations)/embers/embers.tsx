@@ -100,16 +100,27 @@ export default function Embers() {
                 </div>
 
 
-                {/* <div className={styles.sqwraper}>
-
-                        <img src="https://ik.imagekit.io/localstore/FAV.png?updatedAt=1749291206409"
-                            className={styles.sqimg}
-                            draggable="false"
-                        />
-                    </div> */}
-
-
             </div>
+
+
+            <div className={styles.labelheader}>
+
+                <p className={styles.chip}>
+                    ↳ Typography
+                </p>
+
+                <div className={styles.chip}>
+                    The brand typography combines Interstate Ultra Bold as the primary font to deliver a modern, bold, and sharp presence, capturing the energetic and vibrant vibe of BBQ. Paired with Instrument Serif, which adds a traditional, experienced, and trustworthy feel, the typography strikes the perfect balance between contemporary edge and heritage, reflecting the brand’s journey of flavors and expertise.
+                </div>
+                <img src="https://ik.imagekit.io/localstore/campain.png?updatedAt=1749536837449" draggable="false" className={styles.sideimgbanner} />
+            </div>
+
+            <div className={styles.imagewraper}>
+                <img src="https://ik.imagekit.io/localstore/Font.png" draggable="false" className={styles.imgbanner} />
+            </div>
+
+
+
 
             <div className={styles.videoheader}>
                 <span className={styles.chip}>
@@ -127,11 +138,12 @@ export default function Embers() {
                 <span className={styles.chip}>
                     Built with scalability in mind, styling using SCSS variables for scalability.
                     <br />
-                    {/* <span className={styles.wiped}>
-                        ↳ View Code Github
-                    </span> */}
+
                 </span>
             </div>
+
+
+
 
             <div className={styles.videowraper}>
                 <BackgroundVideo
@@ -145,6 +157,8 @@ export default function Embers() {
                     className={styles.fullwidthbanner}
                 />
             </div>
+
+
         </div>
     )
 }
