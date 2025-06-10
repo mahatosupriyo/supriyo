@@ -105,20 +105,36 @@ export default function Embers() {
 
             <div className={styles.labelheader}>
 
-                <p className={styles.chip}>
-                    ↳ Typography
-                </p>
 
+                <p className={styles.chip}>↳ Typography</p>
                 <div className={styles.chip}>
                     The brand typography combines Interstate Ultra Bold as the primary font to deliver a modern, bold, and sharp presence, capturing the energetic and vibrant vibe of BBQ. Paired with Instrument Serif, which adds a traditional, experienced, and trustworthy feel, the typography strikes the perfect balance between contemporary edge and heritage, reflecting the brand’s journey of flavors and expertise.
                 </div>
-                <img src="https://ik.imagekit.io/localstore/campain.png?updatedAt=1749536837449" draggable="false" className={styles.sideimgbanner} />
+                <img src="https://ik.imagekit.io/localstore/Embers%20Campaign.png?updatedAt=1749583732091" draggable="false" className={styles.sideimgbanner} />
+                <div></div>
             </div>
 
-            <div className={styles.imagewraper}>
-                <img src="https://ik.imagekit.io/localstore/Font.png" draggable="false" className={styles.imgbanner} />
+            <div className={styles.labelheader}>
+                <p className={styles.chip}>↳ Typefaces</p>
+                <img src="https://ik.imagekit.io/localstore/In.png?updatedAt=1749584773410" draggable="false" className={styles.sqimg} />
+                <img src="https://ik.imagekit.io/localstore/Is.png?updatedAt=1749584773353" draggable="false" className={styles.sqimg} />
+
+                <div></div>
             </div>
 
+
+            <div className={styles.labelheader}>
+                <p className={styles.chip}>↳ Color Scheme</p>
+                <img src="https://ik.imagekit.io/localstore/Colors.png?updatedAt=1749584267894" draggable="false" className={styles.sqimg} />
+                <div className={styles.chip}>
+                    I’ve used a bold palette of red, green, black, and cream—colors that play with high contrast to spark a sense of hunger and excitement.
+                    <br />
+                    Red naturally triggers appetite, while green balances it with freshness, creating an inviting warmth. Black adds depth and confidence, anchoring the brand’s identity. Cream smooths out the edges, bringing a sense of trust and tradition.
+                    <br />
+                    Together, they grab attention, evoke cravings, and make you crave every bite—just the way a good BBQ brand should.
+                </div>
+                <div></div>
+            </div>
 
 
 
@@ -145,7 +161,7 @@ export default function Embers() {
 
 
 
-            <div className={styles.videowraper}>
+            <div className={styles.videowraper} style={{ marginBottom: '12rem' }}>
                 <BackgroundVideo
                     draggable="false"
                     playbackId='h5JIvbV1ESvFWzCeO02kyxP5dIYChebkP91ngWzp1Dro'
