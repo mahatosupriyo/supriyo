@@ -1,7 +1,5 @@
 "use client"
-import React, { useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import React from 'react'
 import styles from "./home.module.scss"
 import EduBurner from "./(creations)/eduburner/eduburner";
 import NavBar from "@/components/navbar/navbar";
@@ -9,32 +7,6 @@ import Link from "next/link";
 import Embers from "./(creations)/embers/embers";
 
 export default function Portfolio() {
-
-
-
-    // GSAP Starts Here
-
-    const triggerElement = useRef(null)
-    const slider = useRef(null)
-    let direction = -1
-
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger)
-
-        gsap.to(slider.current, {
-            scrollTrigger: {
-                trigger: document.documentElement,
-                start: 10,
-                end: window.innerHeight,
-                scrub: 0.25,
-                onUpdate: event => direction = event.direction * -1
-            },
-            x: "-=1300px"
-        })
-    }, [])
-
-
-    // GSAP Ends Here
 
     return (
         <div className={styles.wraper}>
@@ -163,18 +135,6 @@ export default function Portfolio() {
 
                 </section>
 
-            </div>
-
-            <div className={styles.sliderContainer}>
-                <div ref={slider} className={styles.Slider}>
-                    <img className={styles.TechBanner} src="https://ik.imagekit.io/localstore/icons/Techno.svg?updatedAt=1749415449816" ref={triggerElement} draggable="false" />
-                    <img className={styles.TechBanner} src="https://ik.imagekit.io/localstore/icons/Techno.svg?updatedAt=1749415449816" ref={triggerElement} draggable="false" />
-                    <img className={styles.TechBanner} src="https://ik.imagekit.io/localstore/icons/Techno.svg?updatedAt=1749415449816" ref={triggerElement} draggable="false" />
-                    <img className={styles.TechBanner} src="https://ik.imagekit.io/localstore/icons/Techno.svg?updatedAt=1749415449816" ref={triggerElement} draggable="false" />
-                    <img className={styles.TechBanner} src="https://ik.imagekit.io/localstore/icons/Techno.svg?updatedAt=1749415449816" ref={triggerElement} draggable="false" />
-                    <img className={styles.TechBanner} src="https://ik.imagekit.io/localstore/icons/Techno.svg?updatedAt=1749415449816" ref={triggerElement} draggable="false" />
-                    <img className={styles.TechBanner} src="https://ik.imagekit.io/localstore/icons/Techno.svg?updatedAt=1749415449816" ref={triggerElement} draggable="false" />
-                </div>
             </div>
 
             <EduBurner />
